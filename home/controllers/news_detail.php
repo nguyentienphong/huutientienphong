@@ -56,7 +56,7 @@ $array_month = array(0=>array('01'=>'Tháng một',
 </head>
     <body>
         <? include("social_plugins/facebook.php");?>
-        <?php include('view/common/vic_header.php');?>
+        <?php include(ROOT.'/home/view/common/vic_header.php');?>
         <section id="breadcrumb-wrapper">
             <div class="container">
                 <ol class="breadcrumb">
@@ -89,19 +89,19 @@ $array_month = array(0=>array('01'=>'Tháng một',
                             <div style=" padding: 10px 10px;border: 1px solid #E1E1E1;width:100%;margin-bottom: 20px;" ><div class="fb-like" data-href="<?=DOMAIN.$_SERVER['REQUEST_URI']?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></div>
                             
                             
-                            <?php include('view/news/vin_relate.php');?>
+                            <?php include(ROOT.'/home/view/news/vin_relate.php');?>
                             
                         </div>
                     </div>
         
                 </div>
         
-                <?php include('view/news/vin_hot.php');?>
+                <?php include(ROOT.'/home/view/news/vin_hot.php');?>
         
             </div>
         
         </section>
-        <?php include('view/common/vic_footer.php');?>
+        <?php include(ROOT.'/home/view/common/vic_footer.php');?>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="/home/js/jquery.flexslider-min.js"></script>

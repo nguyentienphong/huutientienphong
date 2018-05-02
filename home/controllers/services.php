@@ -1,5 +1,4 @@
 <?
-var_dump($alias);
    $services_page = true;
    $services = new Services($alias);
 ?>
@@ -25,7 +24,7 @@ var_dump($alias);
     <![endif]-->
 </head>
 <body>
-<?php include('view/common/vic_header.php');?>
+<?php include(ROOT.'/home/view/common/vic_header.php');?>
 <section id='submenu_wrapper' style="top: 99px;">
     <div class="container">
         <ul class="nav nav navbar-nav">
@@ -116,7 +115,7 @@ var_dump($alias);
     </div>
 
 </section>
-<?php include('view/common/vic_footer.php');?>
+<?php include(ROOT.'/home/view/common/vic_footer.php');?>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="/home/js/main.js"></script>

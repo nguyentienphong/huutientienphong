@@ -15,9 +15,9 @@ $url = $_SERVER['REQUEST_URI'];
       $lang_id = 0;
    }
 if(isset($_COOKIE['lang_id'])) $lang_id = $_COOKIE['lang_id'];
-require 'home/config.php';
+require 'home/config/config.php';
 $rewrite = new Rewrite();
 $file = $_GET['file'];
 $alias = $_GET["alias"];
-require "home/$file.php";
+require "home/controllers/$file.php";
 ?>

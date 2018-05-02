@@ -37,8 +37,8 @@ $home_page = true;
         <script src="/home/js/bootstrap.min.js"></script>    
 </head>
     <body>
-        <?php include('view/common/vic_header.php');?>
-        <?php include('view/home/vih_slider.php');?>
+        <?php include(ROOT.'/home/view/common/vic_header.php');?>
+        <?php include(ROOT.'/home/view/home/vih_slider.php');?>
         <script>
             $(document).ready(function () {
                 $('.flexslider').flexslider({
@@ -48,21 +48,21 @@ $home_page = true;
         </script>
         <section id="main-content">
             <div class="container">
-                <?php include('view/home/vih_services.php');?>
+                <?php include(ROOT.'/home/view/home/vih_services.php');?>
             </div>
         </section>
         <section id="news">
             <div class="container">
-                <?php include('view/home/vih_news.php');?>
+                <?php include(ROOT.'/home/view/home/vih_news.php');?>
             </div>
         </section>
         
         <section id="recruitment">
             <div class="container">
-                <?php include('view/home/vih_recruitment.php');?>
+                <?php include(ROOT.'/home/view/home/vih_recruitment.php');?>
             </div>
         </section>
-        <?php include('view/common/vic_footer.php');?>
+        <?php include(ROOT.'/home/view/common/vic_footer.php');?>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         
     </body>

@@ -2,7 +2,7 @@
 ob_start();
 session_start();	
 error_reporting(E_ALL);
-require_once '../config.php';
+require_once '../config/config.php';
 $type = getValue('type','str','POST','');
 $rt = array();
 $rt['suc'] = 0;

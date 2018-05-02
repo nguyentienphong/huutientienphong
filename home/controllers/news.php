@@ -28,7 +28,7 @@ $news_page = true;
     <![endif]-->
 </head>
     <body>
-        <?php include('view/common/vic_header.php');?>
+        <?php include(ROOT.'/home/view/common/vic_header.php');?>
         <section id="breadcrumb-wrapper">
             <div class="container">
                 <ol class="breadcrumb">
@@ -39,8 +39,8 @@ $news_page = true;
         </section>
         <section id="main-content">
             <div class="container">
-                <?php include('view/news/vin_new.php');?>
-                <?php include('view/news/vin_hot.php');?>
+                <?php include(ROOT.'/home/view/news/vin_new.php');?>
+                <?php include(ROOT.'/home/view/news/vin_hot.php');?>
             </div>
         </section>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
