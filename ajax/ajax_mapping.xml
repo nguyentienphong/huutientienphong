@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Nhớ : Sắp xếp các module theo thứ tự ABC-->
+<mapping>
+    <modules>
+        <module name="mesage" path="ajax/mesage"></module> 
+        <module name="more_mesage" path="ajax/more_mesage"></module> 
+        <module name="more_share" path="ajax/more_share"></module> 
+        <module name="more_pg" path="ajax/more_pg"></module>   
+        <module name="more_jobs" path="ajax/more_jobs"></module>         
+    </modules>
+</mapping>

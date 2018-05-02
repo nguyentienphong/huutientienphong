@@ -1,0 +1,144 @@
+.user_page {
+   width: 100%;
+   margin: 10px auto;
+}
+.user_page .wrap {
+   background: #fff;
+}
+.box_user {
+   padding: 10px;
+   height: auto;
+   min-height: 500px;
+}
+.box_user .title {
+   height: 60px;
+   line-height: 60px;
+   color: #606060;
+   font-size: 32px;
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+.box_user .user_control {
+   width: 100%;
+   min-height: 40px;
+}
+.box_user .user_control_group1 {
+   width: 360px;
+   padding-right: 20px;
+   float: left;
+   text-align: right;
+   font-size: 15px;
+}
+.box_user .user_control_group2 {
+   width: 560px;
+   float: left;
+}
+.box_user .user_control_group2 input[type="text"], .box_user .user_control_group2 input[type="password"] {
+   width: 300px;
+   height: 26px;
+   line-height: 26px;
+   border: 1px solid #cacaca;
+   border-radius: 4px;
+}
+.list_message {
+   width: 100%;
+}
+.list_message li{
+   width: 100%;
+   border-top: 1px solid #ccc;
+   padding-top: 5px;
+   padding-bottom: 10px;
+   position: relative;
+}
+.list_message li .img{
+   width: 40px;
+   height: 40px;
+   float: left;
+   overflow: hidden;
+}
+.list_message li .img img{
+   width: 40px;
+   min-height: 40px;
+}
+.list_message li .content{
+   width: 800px;
+   margin-left: 10px;
+   float: left;
+}
+.list_message li .content .name{
+   padding-bottom: 5px;
+}
+.list_message li .content .date{
+   color: #888;
+   font-size: 12px;
+   padding-top: 3px;
+}
+.mes_check {
+   background: #fafafa;
+}
+.rep_mes {
+   position: absolute;
+   top: 0px;
+   right: 0px;
+   height: 24px;
+   line-height: 24px;
+   padding: 0px 10px;
+   background: #00b22d;
+   color: #fff;
+   cursor: pointer;
+}
+.table-bordered {
+   border: 1px solid #dddddd;
+   border-collapse: separate;
+   border-left: 0;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+}
+#table-listing {
+   border-top: 1px solid #bbb;
+   background: #fff;
+   width:100%
+}
+#table-listing .center {
+   text-align: center;
+}
+.tr_top{
+   text-transform: uppercase;
+   text-align:center !important;
+   background: #eeeeee;
+   height:37px;
+   color: #606060;
+}
+#table-listing td, #table-listing th {
+   vertical-align: middle;
+}
+.table-bordered th, .table-bordered td {
+   border-left: 1px solid #dddddd;
+}
+.table th, .table td {
+   padding: 8px;
+   line-height: 20px;
+   text-align: left;
+   vertical-align: top;
+   border-top: 1px solid #dddddd;
+}
+.img img {
+   width: 212px;
+   height: 140px;
+}
+.jobs_edit img{
+   width:20px;
+}
+.jobs_delete img{
+   width: 24px;
+   margin-top: 3px;
+}
+#table-listing a{
+   color:#333;
+   font-size:15px;
+   font-weight: bold;
+}
+#table-listing input{
+   cursor:pointer
+}

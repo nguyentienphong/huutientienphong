@@ -1,0 +1,30 @@
+.aboutus_title{
+   max-width:598px;
+   margin: 0px auto;
+   padding-top:30px;
+   text-align: center;
+}
+.aboutus_title h1{
+   color:#fff;
+   width: 200px;
+   float:left;
+}
+.line_horizontal{
+   float:left;
+   width:199px;
+   height:1px;
+   background: #797979;
+   margin-top:16px
+}
+.aboutus_info{
+   margin-top:20px;
+   display: inline-block;
+   padding-bottom: 40px;
+}
+.aboutus_info img{
+   float: left;
+   margin-right: 20px;
+}
+.aboutus_detail{
+
+}

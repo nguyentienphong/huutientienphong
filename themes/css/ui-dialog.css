@@ -1,0 +1,60 @@
+/*--------------dialog-------------*/
+.message_rate{
+   width: 100%;
+   padding: 30px 0 30px 0;
+   border-bottom: 1px dashed #ddd;
+}
+.message_dialog{
+   width: 100%;
+   padding: 30px 0 30px 0;
+   border-bottom: 1px dashed #ddd;
+}
+.ui-dialog { 
+   position: absolute; top: 0; left: 0; padding: .2em; width: 300px; overflow: hidden; 
+   display: inline-block;
+   overflow: hidden;
+   text-align: center;
+   background: #f7f7f7;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   min-width: 300px;
+   max-width: 800px;
+   border-radius: 2px;
+   padding: 5px;
+}
+.ui-dialog .ui-dialog-titlebar { padding: .4em 1em; position: relative;  }
+.ui-dialog .ui-dialog-title { float: left; margin: -7px 16px 0 58px; }
+.ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 19px; margin: -10px 0 0 0; height: 25px; }
+.ui-dialog .ui-dialog-titlebar-close span { display: block; margin: 1px; background: url(../img/icon_popup_close.png) no-repeat center center;width: 25px;height: 25px}
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { color:#BD8484 }
+.ui-dialog-titlebar-close:hover span{ color:#BD8484 }
+.ui-dialog .ui-dialog-content {float: left; width:300px !important;height:132px !important;margin-top:6px;position: relative; border: 0; padding: .5em 1em; background: #fff;border-radius:5px ; overflow: auto; zoom: 1; }
+.ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+   float: right;
+   z-index: 2;
+   position: absolute;
+   top: 116px;
+   left:36px;
+}
+.ui-dialog .ui-dialog-buttonpane button { 
+   margin: .5em .4em .5em 0;
+   cursor: pointer;   
+   width: 130px;
+   height: 40px;
+   color: white;
+   line-height: 40px;
+   text-align: center;
+   margin-top: 10px;
+   cursor: pointer;
+   border: none;
+   font-weight: bold;
+   border-radius: 3px;
+   background: url(../img/bg_contact_action.png) repeat-x 0 0;
+}
+.ui-dialog .ui-dialog-buttonpane button:hover{background: #aaa no-repeat;}
+.ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+.ui-draggable .ui-dialog-titlebar { cursor: move; }
+.ui-widget-overlay { position: absolute;background-color: black; top: 0; left: 0; width: 100%; height: 100%;opacity: 0.8; }
+.ui-icon-closethick{color:#fff;font-weight:bold;font-size:16px}

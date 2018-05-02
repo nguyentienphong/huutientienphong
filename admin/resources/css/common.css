@@ -1,0 +1,72 @@
+/* CSS class common */
+.fl{float:left}
+.fr{float:right}
+.center{text-align:center}
+.hidden{visibility: hidden}
+.abs{position:absolute}
+.rlt{position:relative}
+.fix{position:fixed}
+.ov{overflow: hidden;height: 100%;}
+.bold{font-weight: bold;}
+.block{display:block}
+select,input{outline:none !important}
+.mgl5{margin-left:5px}
+.mgb5{margin-bottom:5px}
+.controls .mgt7{margin-top:7px}
+.font-size14{
+   font-size: 14px !important;
+}
+#cmsfunc{
+   margin-top: 14px;
+   margin-left: 10px;
+}
+#viewHomePage {
+   left: 204px;
+   top: 14px;
+   cursor: pointer;
+   padding: 0 3px;
+}
+#viewBackPage {
+   left: 227px;
+   top: 14px;
+   cursor: pointer;
+   padding: 0 3px;
+}
+#reloadFrame {
+   left: 250px;
+   top: 14px;
+   cursor: pointer;
+   padding: 0 3px;
+}
+.form-actions{
+   position: fixed;
+   top:31px;
+   right:31px;
+   z-index: 1;
+}
+.form-preview{
+   position: fixed;
+   top: 70px;
+   right: 35px;
+   z-index: 1;
+}
+.imu_image{
+   width:150px;
+   margin-top:10px;
+   position: relative;
+   display: none;
+}
+.del_imu{
+   display: none;
+   position: absolute;
+   top:0;
+   right:0;
+   width: 20px;
+   text-align: center;
+}
+.imu_image:hover .del_imu{
+   display: block;
+}
+.imu_choosed{
+   display:none
+}

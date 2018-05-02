@@ -1,0 +1,326 @@
+body{
+	background:#eff0f4;
+}
+ul{
+    padding:0;margin:0;
+    list-style:none;
+}
+#wrapper *{
+    font-size:11px;
+}
+input[type="file"]{
+    max-width: 100%;
+    font-size: 12px;
+    padding: 0;
+    border: 1px solid #F0F0F0;
+    height: 26px;
+    line-height: 26px;
+}
+#wrapper .controls textarea{
+    height: 80px;
+}
+.form-asterick{color:#D14}
+.help-inline{
+	margin-top:5px;
+	font-size:13px;
+	color:#999;
+}
+#wrapper{
+	background:#fcfcfc;
+	padding-top:50px;
+}
+#wrapper .form-textnote{
+    padding:20px 178px;
+    font-size:13px;
+}
+.module_header{
+	padding:10px 30px;
+	background:#005FCC;
+	color:#fff;
+	text-transform:uppercase;
+	font-size:16px;
+    font-family:Tahoma;
+	width:100%;
+    z-index:100;
+    text-align: center;
+}
+.grid_header{
+    padding-left:5px;
+}
+.grid_header input[type="text"]{
+    font-size: 11px;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 2px;
+    width: 120px;
+    border-radius: 0;
+    margin-bottom: 5px;
+}
+.grid_header input[type="submit"]{
+    height: 26px;
+    line-height: 24px;
+    font-size: 11px;
+    padding-top: 0;
+    margin-top: -6px;
+    margin-left: 10px;
+}
+.grid_header select{
+    font-size: 11px;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 2px;
+    width: 120px;
+    border-radius: 0;
+    margin-bottom: 5px;
+}
+#table-listing{
+    border-top: 1px solid #bbb;
+    background:#fff;
+}
+
+#table-listing th{
+    color: #333333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: default;
+    background: #eee;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#table-listing th .caret,#table-listing th .caret-up{
+    cursor:pointer;
+    margin-top: 9px;
+}
+#table-listing .check{
+    border:0;
+    margin:0;
+    padding:0;
+}
+#table-listing td,#table-listing th{
+    vertical-align: middle;
+}
+#table-listing .center{
+    text-align: center;
+}
+.table-hover tbody tr:hover td {
+    background-color: #F2FBFF;
+}
+#table-listing td .row{
+    margin-left:0px; 
+}
+#table-listing .img_thumb{
+    margin:0 auto;
+    width:100px;
+    height:70px;
+    overflow:hidden;
+    margin-bottom: 2px;
+    border:1px solid #F0F0F0;
+}
+#table-listing .footer td{
+    background:#f5f5f5;
+}
+#table-listing input,#table-listing select{
+    padding:0;margin:0;
+    padding-left:2px;
+    height:22px;line-height: 22px;
+    border-radius: 0;
+    border:1px solid #ccc;
+    background:#fafafa;
+}
+#table-listing select{
+    width:auto;
+}
+#table-listing input:focus,#table-listing select:focus{
+    border:1px solid #fc8888;
+    background:#fff;
+}
+.relate_element{
+    padding: 2px;
+    margin-top: 2px;
+}
+.label-section{
+    display: block;
+    background: #ccc;
+    text-align: center;
+}
+#wrapper .alert[data-toggle="collapse"]{
+    cursor:pointer;
+}
+/*uploader style*/
+.slides .thumb{
+    width : 80px;
+    height : 80px;
+    float : left;
+    margin-right: 15px;
+    border : 1px solid #ccc;
+    padding : 2px;
+    background : #fff;
+    position: relative;
+}
+.thumb#add-item{
+    border : 1px solid #ccc;
+    box-shadow: 0px 0px 1px #ccc;
+    text-align: center;
+}
+.thumb#add-item span{
+    font-size: 16px;
+    font-weight: bold;
+    padding : 20px;
+    float : left;
+    cursor : pointer;
+}
+.thumb#add-item span:hover{
+    color : #000000;
+    text-shadow: 0 0 2px #aaa;
+}
+.thumb#add-item i.uploading-msg{
+    float : left;
+    padding-top : 20px;
+    color : #24748c;
+}
+.thumb .thumb-del{
+    top : 0;
+    left : 0;
+    background : rgba(0,0,0,0.6);
+    position : absolute;
+    width : 100%;
+    height :100%;
+    text-align: center;
+    display : none;
+}
+.thumb:hover .thumb-del{
+    display:block;
+}
+.thumb .thumb-del .label-warning{
+    float: left;
+    margin-top: 30px;
+    margin-left: 24px;
+    padding: 3px 8px;
+    cursor:pointer;
+}
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; font-size: 12px}
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+
+.icon-green:before{
+   color:green
+}
+.icon-red:before{
+   color:red
+}
+.pointer{
+   cursor: pointer;
+}
+.font-size17{
+   font-size:14px
+}
+.wrap_seometa {
+   width: 100%;
+   margin-top:  30px;
+   padding: 10px 0px;
+   background: #f9f9f9;
+   border-top: 3px solid #999;
+}
+.wrap_seometa > h2{
+   font-size: 20px;
+   line-height: 1.5em;
+   margin: 0px;
+   padding: 0px;
+   padding-left: 10px;
+}
+.preview_snippet {
+   padding: 10px;
+}
+.preview_snippet > h4 {
+   font-size: 15px;
+   color: #333;
+}
+.preview_snippet_main {
+   border: 1px solid #bebebe;
+   padding: 10px;
+   background: #fff;
+}
+.preview_snippet_title {
+   color: #12c;
+   text-decoration: none;
+   cursor: pointer;
+   font-size: 18px;
+}
+.preview_snippet_link {
+   color: #093;
+   font-style: normal;
+   font-size: 13px;
+   padding-bottom: 0px;
+   margin-bottom: 0px;
+}
+.preview_snippet_des {
+   color: #222;
+   font-size: 13px;
+}
+.in_title_count, .in_des_count {
+   padding: 0px 8px;
+   background: #eee;
+   color: #000000;
+   border-radius: 2px;
+   display: block;
+   float: left;
+   margin: 2px 2px 0px 0px;
+}
+.lrow {
+   width: 100%;
+   padding: 5px 0px;
+   margin-left: 0px;
+   font-size: 12px;
+   line-height: 1.2em;
+}
+.lrow [class*=span] {
+   display: table-cell;
+   float: none;
+   margin-left: 0;
+}
+.lrow .span1 {
+   width: 44px;
+}
+.lrow .span2 {
+   width: 124px;
+}
+.lrow .span3 {
+   width: 204px;
+}
+.lrow .span4 {
+   width: 284px;
+}
+.lrow .span5 {
+   width: 364px;
+}
+.lrow .span6 {
+   width: 444px;
+}
+.lrow .span7 {
+   width: 524px;
+}
+.lrow .span8 {
+   width: 604px;
+}
+.ltitle {
+   font-weight: bold;
+   padding-right: 5px;
+   font-size: 11px;
+}
+.lcontent {
+   color: #666;
+   font-size: 11px;
+}
+.llink {
+   font-size: 15px;
+   text-decoration: none;
+   font-weight: bold;
+}
+.get_log_add {
+   padding-bottom: 3px;
+}
+.form-control {
+   border: 1px solid #eee;
+}

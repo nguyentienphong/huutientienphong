@@ -1,0 +1,61 @@
+.maps_title{
+   width:100%;
+   font-size:20px;
+   text-align: left;
+}
+#GoogleMapPanel {
+   position: relative;
+   max-width: 469px;
+   display:inline-block;
+}
+.map_canvas {
+   width: 469px;
+   height: 381px;
+   
+}
+.map_canvas .infowindow {
+   width: 350px;
+   padding: 10px;
+   border: solid 1px #d4d4d4;
+   background: #fff;
+   border-radius: 5px
+}
+.contact_wrap{
+   margin-left:25px;
+}
+.fc_info{
+   display:inline-block;
+   vertical-align: top;
+   max-width: 205px;
+   padding:0 17px
+}
+.contact_form{
+   display:inline-block;
+   vertical-align: top;
+   max-width: 244px;
+}
+.inputtxt{
+   width: 238px;
+   height:29px;
+   border:1px solid #353535;
+   margin-bottom:7px;
+   padding-left:4px;
+   background:none;
+   display: inline-block;
+   color: #FFF;
+}
+.contact_form textarea {
+   height: 120px;
+}
+.logMeIn{
+   width: 244px;
+   height:38px;
+   background:#0083a9;
+   color: #fff;
+   border:none;
+   cursor: pointer;
+   font-weight:bold;
+}
+.alert-success{
+   width:400px
+}

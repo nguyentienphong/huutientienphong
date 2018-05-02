@@ -1,0 +1,61 @@
+.comments {
+margin: 20px auto;
+width: 100%;
+height: auto;
+overflow: hidden;
+position: relative;
+}
+.comments_tab {
+width: 100%;
+height: 35px;
+position: relative;
+z-index: 1000;
+}
+.comments_tab .active {
+color: #0096AF !important;
+background: #262626;
+height: 35px;
+}
+.comments_tab_gg {
+left: 140px;
+}
+.comments_tab_item {
+width: 120px;
+height: 34px;
+line-height: 34px;
+float: left;
+margin-right: 5px;
+border: 1px solid #bebebe;
+border-bottom: none;
+cursor: pointer;
+color: #555;
+font-size: 14px;
+text-align: center;
+font-weight: bold;
+position: absolute;
+top: 0px;
+background: #efefef;
+}
+.comments_main {
+width: 99%;
+border: 1px solid #bebebe;
+position: relative;
+overflow: hidden;
+z-index: 10;
+}
+.comments_main_item {
+width: 98%;
+padding: 10px;
+position: absolute;
+top: 0px;
+left: 0px;
+z-index: 100;
+background: #000;
+}
+/************ đè lên css của fb ***********************/
+.fbFeedbackContent .composer{
+   border:none !important;
+}
+.fbConnectWidgetFooter .fbFooterBorder{
+   border:none !important;
+}
