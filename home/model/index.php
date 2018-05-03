@@ -36,5 +36,10 @@ class Index extends Base{
                           WHERE par_active = 1
                           LIMIT 10');
    }
+   public function feedback() { 
+      return db_array('SELECT *
+                          FROM feedback
+                          WHERE fee_active = 1 LIMIT 3');
+   }
 }
 ?>

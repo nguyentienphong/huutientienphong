@@ -69,6 +69,13 @@ $arr_lang = array(0=>'Tiếng Việt',1=>'Tiếng Anh');
 require_once(ROOT."/home/lang/lang.php");
 
 //Hàm chuyển giá trị của phần tử tiếng việt của mảng sang phần tử tiếng anh tương ứng ví dụ $arr['title'] = $arr['title_en']
+
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+if(!isset($_COOKIE['lang_id'])){
+    if($lang == 'vi') setcookie("lang_id", 0, time() + 10800, "/");
+    elseif($lang == 'en') setcookie("lang_id", 1, time() + 10800, "/");
+    elseif($lang == 'ko' || $lang == 'ko-kp' || $lang == 'ko-kr') setcookie("lang_id", 2, time() + 10800, "/");
+}
 function change_language_value(&$array) {
    if(isset($_COOKIE['lang_id']) && ($_COOKIE['lang_id'] == 1)) {
       foreach($array as $k=>$v) {

@@ -84,6 +84,7 @@ function getDateTime($language=1, $getDay=1, $getDate=1, $getTime=1, $timeZone="
 	switch($language){
 		case 1: $dayArray = array("Chủ nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"); break;
 		case 2: $dayArray = array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"); break;
+        case 3: $dayArray = array("일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"); break;
 		default:$dayArray = array("Chủ nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"); break;
 	}
 	$strDateTime = "";

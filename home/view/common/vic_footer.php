@@ -46,6 +46,9 @@
 						<h4><?php echo $language[$lang_id]['lienhe']?></h4>
 						<ul class="colorlib-footer-links">
                             <?
+                                foreach($office as $k=>$v) {
+                                change_language_value($office[$k]);
+                            }
                               foreach($office as $row) {
                             ?>
                             
