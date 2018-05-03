@@ -19,5 +19,11 @@ switch($type){
       $rt['suc'] = 1;
       echo json_encode($rt);
    break;
+   case 'langKo':
+      setcookie('lang', 'ko', time() + 10800, "/");
+      setcookie('lang_id', 2, time() + 10800, "/");
+      $rt['suc'] = 1;
+      echo json_encode($rt);
+   break;
 }
 ?>

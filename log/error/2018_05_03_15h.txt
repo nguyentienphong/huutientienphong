@@ -1,0 +1,15 @@
+IP:::1Thoi gian : 15:24 /Loi o file : Loi query : (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND ser_active = 1' at line 3Database : vienduongcatbaQuery : SELECT *
+                     FROM services
+                     WHERE AND ser_active = 1//------------------------------------------------------------------------------------------------->IP:::1Thoi gian : 15:22 /Loi o file : Loi query : (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND ser_active = 1' at line 3Database : vienduongcatbaQuery : SELECT *
+                     FROM services
+                     WHERE AND ser_active = 1//------------------------------------------------------------------------------------------------->IP:::1Thoi gian : 15:21 /Loi o file : Loi query : (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND ser_active = 1' at line 3Database : vienduongcatbaQuery : SELECT *
+                     FROM services
+                     WHERE AND ser_active = 1//------------------------------------------------------------------------------------------------->IP:::1Thoi gian : 15:21 /Loi o file : Loi query : (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND ser_active = 1' at line 3Database : vienduongcatbaQuery : SELECT *
+                     FROM services
+                     WHERE AND ser_active = 1//------------------------------------------------------------------------------------------------->IP:::1Thoi gian : 15:20 /Loi o file : Loi query : (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND ser_active = 1' at line 3Database : vienduongcatbaQuery : SELECT *
+                     FROM services
+                     WHERE AND ser_active = 1//------------------------------------------------------------------------------------------------->IP:::1Thoi gian : 15:20 /Loi o file : Loi query : (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND ser_active = 1' at line 3Database : vienduongcatbaQuery : SELECT *
+                     FROM services
+                     WHERE AND ser_active = 1//------------------------------------------------------------------------------------------------->IP:::1Thoi gian : 15:19 /Loi o file : Loi query : (1064) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND ser_active = 1' at line 3Database : vienduongcatbaQuery : SELECT *
+                     FROM services
+                     WHERE AND ser_active = 1//------------------------------------------------------------------------------------------------->

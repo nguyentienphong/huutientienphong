@@ -1,0 +1,6 @@
+.icon-vn{
+    background: url('/home/images/vi-icon.png');
+}
+.lang_active img{
+    border-bottom: 2px solid red;
+}

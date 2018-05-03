@@ -4,7 +4,7 @@ class Rewrite{
    var $path;
    var $rules;
    var $variables;
-   var $e404		=	"home/404.php";
+   var $e404		=	"home/controllers/404.php";
    /*$url = 'http://domain.com/danh-muc/duong-dan-chi-tiet.html?arg=value#anchor';
    dump(parse_url($url));
    Array

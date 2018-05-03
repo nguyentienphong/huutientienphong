@@ -33,7 +33,7 @@ $action		= getValue("action", "str", "POST", "");
     <form class="form-signin" action="" method="post">
         <div class="form-signin-heading text-center">
             <h1 class="sign-title">Đăng nhập</h1>
-            <img src="/home/img/logo.png" alt="">
+            <img src="/home/img/logo.png" alt="" style="max-width:300px">
         </div>
         <div class="login-wrap">
         <?

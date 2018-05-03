@@ -77,6 +77,13 @@ function change_language_value(&$array) {
          }
       }
    }
+   if(isset($_COOKIE['lang_id']) && ($_COOKIE['lang_id'] == 2)) {
+      foreach($array as $k=>$v) {
+         if(isset($array[$k.'_ko'])){
+            $array[$k] = $array[$k.'_ko'];
+         }
+      }
+   }
 } 
 $array_month = array('01'=>'Tháng một',
                     '02'=>'Tháng hai',

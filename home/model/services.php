@@ -9,7 +9,8 @@ class Services extends Base{
     var $page_size = 8;//Kích c? 1 trang hi?n th? bao nhiêu k?t qu?
     var $wos_id = 0;//d?a di?m làm vi?c
     
-    public function __construct($alias){
+    public function __construct($alias =''){
+        if($alias != ''){
         $this->result = $this->services_detail($alias);
         $this->table = 'services';
         if($this->result) {   
@@ -18,6 +19,7 @@ class Services extends Base{
             $this->url = 'dich-vu/'.$this->result['ser_alias'].'.html';
         }
         parent::__construct($this->result['ser_id']);
+        }
     }
     public function services_detail($alias) {  
       return db_first('SELECT *
@@ -29,6 +31,13 @@ class Services extends Base{
         $arr = db_array('SELECT *
                      FROM services
                      WHERE ser_cat_id = '.$cat_id.' AND ser_active = 1');
+     return $arr;
+    }
+    
+    public function services_list(){
+        $arr = db_array('SELECT *
+                     FROM services
+                     WHERE ser_active = 1');
      return $arr;
     }
 }

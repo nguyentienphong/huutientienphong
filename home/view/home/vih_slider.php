@@ -1,7 +1,6 @@
-<section id="slider">
-    <div class="container-full">
-        <div class="flexslider">
-            <ul class="slides">
+<aside id="colorlib-hero">
+			<div class="flexslider">
+				<ul class="slides">
                 <?
                   $i=0;
                   $slides = $index->slides();
@@ -11,12 +10,23 @@
                   foreach($slides as $row) {
                      $i++;
                 ?>
-                    <li>
-                        <img src="<?=$row['sli_image']?>" alt=""/>
-                    </li>
+                    
+                    <li style="background-image: url(<?=$row['sli_image']?>);">
+			   		<div class="overlay"></div>
+			   		<div class="container-fluid">
+			   			<div class="row">
+				   			<div class="col-md-6 col-sm-12 col-md-offset-3 slider-text">
+				   				<div class="slider-text-inner text-center">
+				   					<h2><?=$row['sli_title']?></h2>
+										<p><a class="btn btn-primary btn-demo" href="<?=$row['sli_link']?>"></i> <?php echo $language[$lang_id]['xemthem']?></a></p>
+				   				</div>
+				   			</div>
+				   		</div>
+			   		</div>
+			   	</li>
                 
                <?}?> 
-            </ul>
-        </div>
-    </div>
-</section>
+			   		   	
+			  	</ul>
+		  	</div>
+		</aside>

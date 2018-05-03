@@ -14,9 +14,12 @@ foreach($arrCat as $i=>$cat){
 $ser_date = time();
 $myform = new generate_form();
 $myform->add('sli_title','sli_title',0,0,'Tiêu đề - mô tả slide');
+$myform->add('sli_title_en','sli_title_en',0,0,'Tiêu đề tiếng anh- mô tả slide');
+$myform->add('sli_title_ko','sli_title_ko',0,0,'Tiêu đề tiếng hàn- mô tả slide');
 $myform->add('sli_link','sli_link',0,0,'#');
 $myform->add('sli_image','imu',0,0,'',1,"Bạn chưa chọn ảnh");
 $myform->add('sli_image_en','imu_en',0,0,'',0,"Bạn chưa chọn ảnh tiếng anh");
+$myform->add('sli_image_ko','imu_ko',0,0,'',0,"Bạn chưa chọn ảnh tiếng anh");
 $myform->add('sli_cat_id','sli_cat_id',0,0,'',1,"Bạn chưa chọn danh mục");
 $myform->add('sli_active','sli_active',1,0,0);
 $myform->add('sli_position','sli_position',1,0,0);
@@ -65,14 +68,23 @@ if($row 		= mysql_fetch_assoc($db_data->result)){
             <div class="panel-body">
                <?print_error_msg($bg_errorMsg)?>
                <?=$form->form_open()?>           
-               <?=$form->showImagesGallery(array('label'=>'Ảnh','title'=>'Ảnh','name'=>'imu','id'=>'imu','value'=>getValue('sli_image','str','POST',$sli_image),'class'=>'col-sm-9'))?>
+               <?=$form->showImagesGallery(array('label'=>'Ảnh','title'=>'Ảnh','name'=>'imu','id'=>'imu','value'=>getValue('imu','str','POST',$sli_image),'class'=>'col-sm-9'))?>
                <?=$form->showImagesGallery(array('label'=>'Ảnh tiếng anh',
                                                  'title'=>'Ảnh hiển thị trong phiên bản tiếng anh',
                                                  'name'=>'imu_en',
                                                  'id'=>'imu_en',
                                                  'class'=>'col-sm-9',
-                                                 'value'=>getValue('sli_image','str','POST',$sli_image_en)))?>
+                                                 'value'=>getValue('imu_en','str','POST',$sli_image_en)))?>
+                                                 
+               <?=$form->showImagesGallery(array('label'=>'Ảnh tiếng hàn',
+                                                 'title'=>'Ảnh hiển thị trong phiên bản tiếng hàn',
+                                                 'name'=>'imu_ko',
+                                                 'id'=>'imu_ko',
+                                                 'class'=>'col-sm-9',
+                                                 'value'=>getValue('imu_ko','str','POST',$sli_image_ko)))?>
                <?=$form->text(array('label'=>'Tiêu đề','name'=>'sli_title','id'=>'sli_title','value'=>getValue('sli_title','str','POST',$sli_title),'require'=>0, 'errorMsg'=>'Bạn chưa nhập tiêu đề', 'placeholder'=> 'Tiêu đề không dài quá 255 ký tự','class'=>'col-sm-9'))?>
+               <?=$form->text(array('label'=>'Tiêu đề tiếng anh','name'=>'sli_title_en','id'=>'sli_title_en','value'=>getValue('sli_title_en','str','POST',$sli_title_en),'require'=>0, 'errorMsg'=>'Bạn chưa nhập tiêu đề tiếng anh', 'placeholder'=> 'Tiêu đề không dài quá 255 ký tự','class'=>'col-sm-9'))?>
+               <?=$form->text(array('label'=>'Tiêu đề tiếng hàn','name'=>'sli_title_ko','id'=>'sli_title_ko','value'=>getValue('sli_title_ko','str','POST',$sli_title_ko),'require'=>0, 'errorMsg'=>'Bạn chưa nhập tiêu đề tiếng hàn', 'placeholder'=> 'Tiêu đề không dài quá 255 ký tự','class'=>'col-sm-9'))?>
                <?=$form->text(array('label'=>'Link','name'=>'sli_link','id'=>'sli_link','value'=>getValue('sli_link','str','POST',$sli_link),'require'=>0, 'errorMsg'=>'Bạn chưa nhập Link', 'placeholder'=> 'Link không dài quá 255 ký tự','class'=>'col-sm-9'))?>
                <?=$form->text(array('label'=>'Thứ tự','name'=>'sli_position','id'=>'sli_position','value'=>getValue('sli_position','str','POST',$sli_position),'require'=>0, 'errorMsg'=>'Bạn chưa nhập Thứ tự', 'placeholder'=> '','class'=>'col-sm-1'))?>
                <?=$form->select(array('label'=>'Danh mục','name'=>'sli_cat_id', 'id'=>'sli_cat_id','option'=>$list_cat, 'title'=>'Chọn danh mục','require'=>1,'errorMsg'=>'Bạn chưa chọn danh mục','selected'=>getValue('sli_cat_id','int','POST',$sli_cat_id),'class'=>'col-sm-9'))?>
