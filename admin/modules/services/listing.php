@@ -12,7 +12,7 @@ foreach($arrCat as $i=>$cat){
 $list = new dataGrid('ser_id',20);
 $list->add('','Ảnh','string',0,0);
 $list->add('ser_title','Tiêu đề','string',1,1, 'width="120px"');
-$list->add('ser_cat_id','Danh mục','array',1,1);
+//$list->add('ser_cat_id','Danh mục','array',1,1);
 $list->add('','Tác giả','string');
 $list->add('','Nổi bật','string');
 $list->add('','Xuất bản','string');
@@ -64,7 +64,7 @@ $total_row = mysql_num_rows($db_listing->result);
                   
                         <?=form_input('ser_title'.$row[$id_field],$row['ser_title'],'class="form-control input-sm" onkeyup="check_edit(\'record_'.$i.'\')"')?>                     
                   </td>
-                  <td><?=form_dropdown('ser_cat_id'.$row[$id_field],$ser_cat_id,$row['ser_cat_id'],'class="form-control input-sm" onchange="check_edit(\'record_'.$i.'\')"')?></td>
+                  
                   <td>
                   <div class="lrow">
                         <div class="span3 lcontent">

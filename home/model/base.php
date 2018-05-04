@@ -119,7 +119,7 @@ class Base {
       return $str_cat;
    }
    public function error404() {
-      require 'home/404.php';
+      require 'home/controllers/404.php';
       exit();
    }
 }

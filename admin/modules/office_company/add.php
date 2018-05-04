@@ -16,8 +16,10 @@ $off_date = time();
 $myform = new generate_form();
 $myform->add('off_name','off_name',0,0,'',1,'Bạn chưa nhập tên văn phòng');
 $myform->add('off_name_en','off_name_en',0,0,'',0,'Bạn chưa nhập tên văn phòng tiếng anh');
+$myform->add('off_name_ko','off_name_ko',0,0,'',0,'Bạn chưa nhập tên văn phòng tiếng hàn');
 $myform->add('off_address','off_address',0,0,'');
 $myform->add('off_address_en','off_address_en',0,0,'');
+$myform->add('off_address_ko','off_address_ko',0,0,'');
 $myform->add('off_fax','off_fax',0,0,'');
 //$myform->add('off_map','off_map',0,0,'',0,'Bạn chưa nhập địa chỉ cho google map');
 $myform->add('off_phone','off_phone',0,0,'');
@@ -78,6 +80,14 @@ if($action == 'execute'){
                                  'placeholder'=> 'Tên đề không dài quá 255 ký tự',
                                  'class'=>'col-sm-9')
                )?>
+               <?=$form->text(array('label'=>'Tên văn phòng tiếng hàn',
+                                 'name'=>'off_name_ko',
+                                 'id'=>'off_name_ko',
+                                 'value'=>'',
+                                 'require'=>0, 'errorMsg'=>'Bạn chưa nhập tên văn phòng tiếng hàn', 
+                                 'placeholder'=> 'Tên đề không dài quá 255 ký tự',
+                                 'class'=>'col-sm-9')
+               )?>
                <?=$form->text(array('label'=>'Địa chỉ hiển thị',
                                    'name'=>'off_address',
                                    'id'=>'off_address',
@@ -88,6 +98,13 @@ if($action == 'execute'){
                <?=$form->text(array('label'=>'Địa chỉ hiển thị tiếng anh',
                                    'name'=>'off_address_en',
                                    'id'=>'off_address_en',
+                                   'value'=>'',
+                                   'helptext'=>'',
+                                   'class'=>'col-sm-9')
+               )?>
+               <?=$form->text(array('label'=>'Địa chỉ hiển thị tiếng hàn',
+                                   'name'=>'off_address_ko',
+                                   'id'=>'off_address_ko',
                                    'value'=>'',
                                    'helptext'=>'',
                                    'class'=>'col-sm-9')

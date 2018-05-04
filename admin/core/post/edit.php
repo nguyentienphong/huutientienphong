@@ -16,16 +16,19 @@ foreach($arrCat as $i=>$cat){
 $myform = new generate_form();
 $myform->add('pos_title','pos_title',0,0,'',1,'Bạn chưa nhập tiêu đề');
 $myform->add('pos_title_en','pos_title_en',0,0,'',0,'Bạn chưa nhập tiêu đề tiếng anh');
+$myform->add('pos_title_ko','pos_title_ko',0,0,'',0,'Bạn chưa nhập tiêu đề tin bằng tiếng hàn');
 //$myform->add('pos_cat_id','pos_cat_id',1,0,0,1,'Bạn chưa chọn danh mục');
 $myform->add('pos_active','pos_active',1,0,0);
 $myform->add('pos_hot','pos_hot',1,0,0);
 $myform->add('pos_tags','pos_tags',0,0,'');
 $myform->add('pos_summary','pos_summary',0,0,'');
 $myform->add('pos_summary_en','pos_summary_en',0,0,'');
+$myform->add('pos_summary_ko','pos_summary_ko',0,0,'');
 $myform->add('pos_detail','pos_detail',0,0,'',1,'Bạn chưa nhập chi tiết');
 $myform->add('pos_detail_en','pos_detail_en',0,0,'',0,'Bạn chưa nhập chi tiết tiếng anh');
+$myform->add('pos_detail_ko','pos_detail_ko',0,0,'',0,'Bạn chưa nhập chi tiết tin tiếng hàn');
 $myform->add('pos_image','imu',0,0,'',0,'Bạn chưa chọn ảnh đại diện');
-$myform->add('pos_image_cover','imu_cover',0,0,'',0,'Bạn chưa chọn ảnh đại diện');
+//$myform->add('pos_image_cover','imu_cover',0,0,'',0,'Bạn chưa chọn ảnh đại diện');
 $myform->removeHTML(0);
 $myform->addTable($bg_table);
 $action = getValue('action','str','POST','');
@@ -92,6 +95,14 @@ if($row 		= mysql_fetch_assoc($db_data->result)){
                                  'placeholder'=> 'Tiêu đề không dài quá 255 ký tự',
                                  'class'=>'col-sm-9')
                )?>
+               <?=$form->text(array('label'=>'Tiêu đề tin tiếng hàn',
+                                 'name'=>'pos_title_ko',
+                                 'id'=>'pos_title_ko',
+                                 'value'=>getValue('pos_title_ko','str','POST',$pos_title_ko),
+                                 'require'=>0, 'errorMsg'=>'Bạn chưa nhập tiêu đề tin', 
+                                 'placeholder'=> 'Tiêu đề không dài quá 255 ký tự',
+                                 'class'=>'col-sm-9')
+               )?>
                <?=$form->text(array('label'=>'Đường dẫn',
                                    'name'=>'pos_alias',
                                    'id'=>'pos_alias',
@@ -127,12 +138,12 @@ if($row 		= mysql_fetch_assoc($db_data->result)){
                                                  'id'=>'imu',
                                                  'class'=>'col-sm-9',
                                                  'value'=>getValue('pos_image','str','POST',$pos_image)))?>
-               <?=$form->showImagesGallery(array('label'=>'Ảnh bìa',
+               <?/*=$form->showImagesGallery(array('label'=>'Ảnh bìa',
                                                  'title'=>'Ảnh bìa',
                                                  'name'=>'imu_cover',
                                                  'id'=>'imu_cover',
                                                  'class'=>'col-sm-9',
-                                                 'value'=>getValue('pos_image','str','POST',$pos_image_cover)))?>
+                                                 'value'=>getValue('pos_image','str','POST',$pos_image_cover)))*/?>
                <?/*=$form->select(array('label'=>'Danh mục',
                                    'name'=>'pos_cat_id', 
                                    'id'=>'pos_cat_id',
@@ -167,6 +178,13 @@ if($row 		= mysql_fetch_assoc($db_data->result)){
                                      'style'=>'width:100%;height:100px', 
                                      'class'=>'col-sm-9')
                )?>
+               <?=$form->textarea(array('label'=> 'Tóm tắt tiếng hàn', 
+                                     'name'=> 'pos_summary_ko', 
+                                     'id'=> 'pos_summary_ko',
+                                     'value'=>getValue('pos_summary_ko','str','POST',$pos_summary_ko), 
+                                     'style'=>'width:100%;height:100px', 
+                                     'class'=>'col-sm-9')
+               )?>
                <?=$form->tinyMCE('Nội dung', 
                               'pos_detail', 
                               'pos_detail', 
@@ -177,6 +195,12 @@ if($row 		= mysql_fetch_assoc($db_data->result)){
                               'pos_detail_en', 
                               'pos_detail_en', 
                               getValue('pos_detail_en','str','POST',$pos_detail_en), 
+                              '100%'
+               )?>
+               <?=$form->tinyMCE('Nội dung tiếng hàn', 
+                              'pos_detail_ko', 
+                              'pos_detail_ko', 
+                              getValue('pos_detail_ko','str','POST',$pos_detail_ko), 
                               '100%'
                )?>
                <?=$form->checkbox(array('label'=> 'Xuất bản', 

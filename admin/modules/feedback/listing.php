@@ -3,14 +3,14 @@ require 'inc_security.php';
                           
 $list = new dataGrid('fee_id',20);
 $list->add('fee_fullname','Tên khách hàng','string',1,1, 'width="120px"');
-$list->add('fee_email','Email','string',1,1, 'width="120px"');
-$list->add('fee_province','Thành phố','array',0,0, 'width="120px"');
+//$list->add('fee_email','Email','string',1,1, 'width="120px"');
+//$list->add('fee_province','Thành phố','array',0,0, 'width="120px"');
 $list->add('fee_content','Nội dung','string',0,0, 'width="120px"');
-$list->add('fee_point','Số sao','string',0,0, 'width="120px"');
+//$list->add('fee_point','Số sao','string',0,0, 'width="120px"');
 //$list->add('fee_cat_id','Danh mục','array',1,1);
-$list->add('','Nổi bật','string');
+//$list->add('','Nổi bật','string');
 $list->add('','Xuất bản','string');
-//$list->add('','Sửa','edit');
+$list->add('','Sửa','edit');
 $list->add('','Xóa','delete');
 $db_count = new db_count('SELECT count(*) as count 
                             FROM '.$bg_table.'
@@ -52,22 +52,14 @@ $total_row = mysql_num_rows($db_listing->result);
                   <td>
                      <?=$row['fee_fullname']?>                     
                   </td>
-                  <td>
-                     <?=$row['fee_email']?>                     
-                  </td>
-                  <td>
-                     <?=$arr_provinces[$row['fee_province']]?>
-                  </td>
+                  
                   <td>
                      <?=$row['fee_content']?>
                   </td>
-                  <td>
-                     <?=$row['fee_point']?>
-                  </td>
                   <?/*<td><?=form_dropdown('fee_cat_id'.$row[$id_field],$fee_cat_id,$row['fee_cat_id'],'class="form-control input-sm" onchange="check_edit(\'record_'.$i.'\')"')?></td>*/?>
-                  <?=$list->showCheckbox('fee_hot',$row['fee_hot'],$row[$id_field])?>
+                  <?//=$list->showCheckbox('fee_hot',$row['fee_hot'],$row[$id_field])?>
                   <?=$list->showCheckbox('fee_active',$row['fee_active'],$row[$id_field])?>
-                  <?//=$list->showEdit($row[$id_field])?>
+                  <?=$list->showEdit($row[$id_field])?>
                   <?=$list->showDelete($row[$id_field])?>
                   <?=$list->end_tr()?>
                   <?}?>
