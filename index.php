@@ -14,8 +14,8 @@ $url = $_SERVER['REQUEST_URI'];
       $_COOKIE['lang_id'] = 0;
       $lang_id = 0;
    }
-if(isset($_COOKIE['lang_id'])) $lang_id = $_COOKIE['lang_id'];
 require 'home/config/config.php';
+//if(isset($_COOKIE['lang_id'])) $lang_id = $_COOKIE['lang_id'];
 $rewrite = new Rewrite();
 $file = $_GET['file'];
 $alias = $_GET["alias"];

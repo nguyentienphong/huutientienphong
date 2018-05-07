@@ -4,7 +4,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-4">
-							<p class="site">www.yoursitehere.com</p>
+							<p class="site">vienduongcatba.com</p>
 						</div>
 						<div class="col-xs-8 text-right">
 							<p class="num"><?php echo $language[$lang_id]['dienthoai']?>: +01-123-456</p>
@@ -48,7 +48,7 @@
 								<li><a href="/nha-hang/"><?php echo $language[$lang_id]['nhahang']?></a></li>
 								<li><a href="/hoi-nghi-va-su-kien/"><?php echo $language[$lang_id]['hoinghivasukien']?></a></li>
 								<li><a href="/tin-tuc/"><?php echo $language[$lang_id]['tintuc']?></a></li>
-								<li><a href="/gioi-thieu"><?php echo $language[$lang_id]['gioithieu']?></a></li>
+								<li><a href="/gioi-thieu/"><?php echo $language[$lang_id]['gioithieu']?></a></li>
 								<li><a href="/lien-he/"><?php echo $language[$lang_id]['lienhe']?></a></li>
 							</ul>
 						</div>

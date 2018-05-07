@@ -2,101 +2,117 @@
    $aboutus_page = true;
    $aboutus = new Aboutus();
 ?>
-<!DOCTYPE html>
-<html lang="en" class="introduction_general not-opacity">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Giới thiệu - VNPT EPAY JSC</title>
+<?php
+$news = new News($alias);
+$page = @$_GET['page'];
+if(!$page) $page = 1;
+$news->page = $page;
+$news->page_size = 4;
+$news_page = true;
+$index = new Index();
+?>
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Giới thiệu về Viễn Dương Cát Bà</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
 
-    <!-- Bootstrap -->
-    <link href="/home/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/home/css/flexslider.css" rel="stylesheet">
-    <link href="/home/css/style.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.2/respond.min.js"></script>
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
 
-    <![endif]-->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="/home/js/main.js"></script>
-    <script src="/home/js/jquery.flexslider-min.js"></script>
-    
-    <script>
-        $(document).ready(function () {
-            $('.flexslider').flexslider({
-            });
-    
-        });
-    </script>
-    
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/home/js/bootstrap.min.js"></script>
-</head>
-<body>
-<?php include('view/common/vic_header.php');?>
-<?php include('view/common/vic_submenu.php');?>
-<section id="slider">
-    <div class="container-full">
-        <div class="flexslider">
-            <ul class="slides">
-                <?
-                  $i=0;
-                  $slides = $aboutus->slides();
-                  foreach($slides as $k=>$v) {
-                     change_language_value($slides[$k]);
-                  }
-                  foreach($slides as $row) {
-                     $i++;
-                ?>
-                    <li>
-                        <img src="<?=$row['sli_image']?>" alt=""/>
-                    </li>
-                
-               <?}?> 
-            </ul>
-        </div>
-    </div>
-</section>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="/home/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/home/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="/home/css/bootstrap.css">
 
-<section id="main-content">
-    <div class="container">
-        <div id="intro_gene">
-            <div class="view-header text-center">
-                <h2 class="view-title text-uppercase"><?=$language[$lang_id]['gioithieuvevnptepay']?></h2>
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/home/css/magnific-popup.css">
 
-                <p class="text-uppercase"><?=$language[$lang_id]['1trong3doanhnghiep']?></p>
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="/home/css/flexslider.css">
 
-                <div class="divide-block"></div>
-            </div>
-            <div class="content">
-                <?=$aboutus_detail['abu_content']?>
-            </div>
-        </div>
-        <div id="intro_gene">
-            <div class="view-header text-center">
-                <h2 class="view-title text-uppercase"><?=$language[$lang_id]['bomayvamohinhtochuc']?></h2>
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/home/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/home/css/owl.theme.default.min.css">
+	
+	<!-- Date Picker -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="/home/fonts/flaticon/font/flaticon.css">
 
-                <p class="" style="text-align: justify;"><?=$language[$lang_id]['gioithieuvebomay']?></p>
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="/home/css/style.css">
+    <link rel="stylesheet" href="/home/css/mystyle.css">
+	<!-- Modernizr JS -->
+	<script src="/home/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
-                <div class="divide-block"></div>
-            </div>
-            <div class="content">
-                <img src="/home/image/bomaytochuc<?=($lang_id == 0) ? '':'_en'?>.jpg" style="width: 100%;"/>
-            </div>
-        </div>
+	</head>
+	<body>
+		
+	<div class="colorlib-loader"></div>
 
-    </div>
+	<div id="page">
+		
+		<?php include(ROOT.'/home/view/common/vic_header.php');?>
+        <?php include(ROOT.'/home/view/home/vih_slider.php');?>
+		<div id="colorlib-about">
+			<div class="container">
+				<div class="row">
+                    <?=$aboutus_detail['abu_content']?>
+					
+				</div>
+			</div>
+		</div>
+		
+		<?php include(ROOT.'/home/view/common/vic_footer.php');?>
+	</div>
 
-</section>
-<?php include('view/common/vic_footer.php');?>
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="/home/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/home/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/home/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/home/js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="/home/js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="/home/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="/home/js/jquery.magnific-popup.min.js"></script>
+	<script src="/home/js/magnific-popup-options.js"></script>
+	<!-- Date Picker -->
+	<script src="/home/js/bootstrap-datepicker.js"></script>
+	<!-- Main -->
+	<script src="/home/js/main.js"></script>
 
-
-
-</body>
+	</body>
 </html>
+
