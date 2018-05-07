@@ -256,7 +256,16 @@ class Rewrite{
          $_GET["alias"] = $regs[1];
          return;
       }
-      
+	  
+	  //cho link: /gui-mail/23 ( gui mail cho yeu cau dat phong )
+      $check_url_path = preg_match("@^/gui-mail/([^/]*)$@" , $this->path['path'], $regs);
+      if ($check_url_path == 1){	
+         $_GET["file"] = "sendmail_api";			
+         $_GET["alias"] =  str_replace('/','',$regs[0]);
+         $_GET["id"] =  $regs[1];
+         return;
+      }
+	        
       if(!isset($_GET["file"]) || $_GET["file"] == '') {
          $this->error404();
       }

@@ -35,8 +35,8 @@ function send_mailer($to,$title,$content,$id_error="",$filename = false){
    //$mail_server   = "123.30.208.146";
    //$mail_port		= 6500;
    $mail_port = 465;// gmail
-   $user_name     =  "tuyendungvnptepay@gmail.com";
-   $password      =  "tien120687";		
+   $user_name     =  "phongnt@vnptepay.com.vn";
+   $password      =  "wpppmjwtmmxdehym";		
 	
 	
 	//bắt đầu thực hiện gửi mail
@@ -56,7 +56,7 @@ function send_mailer($to,$title,$content,$id_error="",$filename = false){
 	$mail->Password = $password; 				// SMTP password
 	
 	$mail->From     = $user_name;				// Email duoc gui tu???
-	$mail->FromName = "tuyendungvnptepay";			// Ten hom email duoc gui
+	$mail->FromName = "Admin";			// Ten hom email duoc gui
 	$to_array = explode(",",$to);
 	for ($i=0; $i<count($to_array); $i++){
 		$mail->AddAddress($to_array[$i],"Admin");	 	// Dia chi email va ten nhan

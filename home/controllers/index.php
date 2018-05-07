@@ -48,7 +48,7 @@ $home_page = true;
 	<link rel="stylesheet" href="/home/css/owl.theme.default.min.css">
 	
 	<!-- Date Picker -->
-	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="/home/css/bootstrap-datepicker.css">
 	<!-- Flaticons  -->
 	<link rel="stylesheet" href="/home/fonts/flaticon/font/flaticon.css">
 
@@ -156,5 +156,10 @@ $home_page = true;
 	<script src="/home/js/main.js"></script>
 
 	</body>
+<?php if(isset($show_modal) && $show_modal != ""): ?>
+	<script>
+		$('#<?php echo $show_modal; ?>').modal('show');
+	</script>
+<?php endif; ?>
 </html>
 

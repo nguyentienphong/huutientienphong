@@ -263,8 +263,9 @@
 	var datePicker = function() {
 		// jQuery('#time').timepicker();
 		jQuery('.date').datepicker({
-		  'format': 'm/d/yyyy',
-		  'autoclose': true
+		  'startDate': new Date(),
+		  'format': 'yyyy-mm-dd',
+		  'autoclose': true		  
 		});
 	};
 
