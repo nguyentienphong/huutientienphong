@@ -10,11 +10,10 @@ $home_page = true;
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Luxehotel Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+    <title><?=$general_array['seo_title']?></title>
+    <meta content="<?=$general_array['seo_keyword']?>" name="keywords"/>
+    <meta content="<?=$general_array['seo_description']?>" name="description"/>	
 
   <!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>

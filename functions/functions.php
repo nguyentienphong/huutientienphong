@@ -454,4 +454,20 @@ function postDataByForm($data,$url = '',$method = 'post') {
         $str .= '<script language="JavaScript">document.frm.submit();</script>';
         echo $str;
 } 
+function log_message($message,$folder_include_name = 'info'){ //$folder_include_name  có thể là error, slow hoặc info
+    $path = $_SERVER['DOCUMENT_ROOT'] . "/log/".$folder_include_name.'/';
+    $filename = date("Y_m_d_H") . ".txt";
+    $time= time();
+    if (file_exists($path . $filename)) {
+
+        $str = file_get_contents($path . $filename);
+        $str =  chr(13) . chr(13) . $str;
+        file_put_contents($path . $filename, "Thoi gian : " . date("H:i:s") . " : " . $folder_include_name . "--------------------------------------------->" . chr(13)  . $message.$str);
+
+    } else {
+
+        file_put_contents($path . $filename, "Thoi gian : " . date("H:i:s") . " : " . $folder_include_name . "--------------------------------------------->" . chr(13) . $message);
+        @chmod($path . $filename, 0644);
+    }
+}
 ?>

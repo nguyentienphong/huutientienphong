@@ -8,8 +8,10 @@ $id_field = 'abu_id';
 $myform = new generate_form();
 $myform->add('abu_summary','abu_summary',0,0,'',0,'');
 $myform->add('abu_summary_en','abu_summary_en',0,0,'',0,'');
+$myform->add('abu_summary_ko','abu_summary_ko',0,0,'',0,'');
 $myform->add('abu_content','abu_content',0,0,'',0,'');
 $myform->add('abu_content_en','abu_content_en',0,0,'',0,'');
+$myform->add('abu_content_ko','abu_content_ko',0,0,'',0,'');
 
 $myform->removeHTML(0);
 $myform->addTable($bg_table);
@@ -102,6 +104,12 @@ if($row 		= mysql_fetch_assoc($db_data->result)){
                               getValue('abu_summary_en','str','POST',$abu_summary_en), 
                               '100%'
                )?>
+               <?=$form->tinyMCE('Giới thiệu tóm tắt tiếng hàn', 
+                              'abu_summary_ko', 
+                              'abu_summary_ko', 
+                              getValue('abu_summary_ko','str','POST',$abu_summary_ko), 
+                              '100%'
+               )?>
                <?=$form->tinyMCE('Nội dung', 
                               'abu_content', 
                               'abu_content', 
@@ -112,6 +120,12 @@ if($row 		= mysql_fetch_assoc($db_data->result)){
                               'abu_content_en', 
                               'abu_content_en', 
                               getValue('abu_content_en','str','POST',$abu_content_en), 
+                              '100%'
+               )?>
+               <?=$form->tinyMCE('Nội dung tiếng hàn', 
+                              'abu_content_ko', 
+                              'abu_content_ko', 
+                              getValue('abu_content_ko','str','POST',$abu_content_ko), 
                               '100%'
                )?>
               
