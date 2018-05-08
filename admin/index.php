@@ -95,7 +95,6 @@ $isAdmin = getValue('isAdmin','int','SESSION',0);
 <script src="resources/js/modernizr.min.js"></script>
 <script src="resources/js/jquery.nicescroll.js"></script>
 
-
 <!--common scripts for all pages-->
 <script src="resources/js/scripts.js?v=2"></script>
 <script>

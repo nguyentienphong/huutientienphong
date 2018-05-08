@@ -320,6 +320,20 @@ $(document).ready(function(){
         changeMonth: true,
          changeYear: true
     });
+	
+	var inputs = $('input[datetimepick-element="1"]');
+	var defaultDate = '';
+	for(var i = 0; i < inputs.length; i++){
+		if($(inputs[i]).val() != '0000-00-00 00:00:00'){
+			defaultDate = $(inputs[i]).val();
+		}
+		$(inputs[i]).datetimepicker({
+			format:'YYYY-MM-DD HH:mm:ss',
+			locale: 'vi',
+			defaultDate : defaultDate
+		});
+	}
+	
     //List combo
     $('#add-combo').click(function(){
         var select = $('#combo_id');

@@ -510,6 +510,12 @@ class form{
         if(isset($attribute['extra'])){
             $extra .= $attribute['extra'];
         }
+		if(isset($attribute['readonly'])){
+            $extra .= $attribute['readonly'];
+        }
+		if(isset($attribute['isdatetimepicker'])){
+            $extra .= ' datetimepick-element="1" ';
+        }
         if(!isset($attribute['value'])) $attribute['value'] = '';        
         $control = form_input($attribute['name'],$attribute['value'],$extra);
         return $this->create_control($attribute,$control);

@@ -39,6 +39,8 @@ $css_global .= '<link rel="stylesheet" type="text/css" href="/admin/resources/cs
 $css_global .= '<link rel="stylesheet" type="text/css" href="/admin/resources/css/template.css?v='.$rand_v.'" />';
 $css_global .= '<link type="text/css" rel="stylesheet" href="/plupload/jquery.ui.plupload/css/jquery-ui.min.css" media="screen" />
                 <link type="text/css" rel="stylesheet" href="/plupload/jquery.ui.plupload/css/jquery.ui.plupload.css" media="screen" />';
+
+$css_global .= '<link rel="stylesheet" type="text/css" href="/admin/resources/css/bootstrap-datetimepicker.css?v='.$rand_v.'" />';
 $js_global = '';
 
 $js_global .= '<script src="/admin/resources/js/jquery-1.10.2.min.js" type="text/javascript"></script>';
@@ -47,6 +49,8 @@ $js_global .= '<script src="/plupload/plupload.full.min.js" type="text/javascrip
 $js_global .= '<script src="/admin/resources/js/bootstrap.min.js" type="text/javascript"></script>';
 $js_global .= '<script src="/admin/resources/js/tinymce/tinymce.min.js" type="text/javascript"></script>';
 $js_global .= '<script src="/admin/resources/js/jquery.autocomplete.js" type="text/javascript"></script>';
+$js_global .= '<script src="/admin/resources/js/moment-with-locales.js?v='.$rand_v.'" type="text/javascript"></script>';
+$js_global .= '<script src="/admin/resources/js/bootstrap-datetimepicker.js?v='.$rand_v.'" type="text/javascript"></script>';
 $js_global .= '<script src="/admin/resources/js/script.js?v=1111111111111111" type="text/javascript"></script>';
 $js_global .= '<script src="/themes/js/jquery.fancybox.pack.js" type="text/javascript"></script>';
 $js_global .= '<script src="/admin/resources/js/icheck/jquery.icheck.js?v=3" type="text/javascript"></script>';
