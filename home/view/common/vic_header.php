@@ -31,7 +31,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-2">
-							<div id="colorlib-logo"><a href="/">Vienduongcatba</a></div>
+							<div id="colorlib-logo"><a href="/"><img src="../../home/images/logo.png"/></a></div>
 						</div>
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
