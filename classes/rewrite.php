@@ -198,6 +198,29 @@ class Rewrite{
          $_GET["page"] =  $regs[2];
          return;
       }
+      //cho link: /hoi-nghi-va-su-kien/ (  )
+      $check_url_path = preg_match("@^/hoi-nghi-va-su-kien/$@" , $this->path['path'], $regs);
+      if ($check_url_path == 1){	
+         $_GET["file"] = "metting_event";			
+         $_GET["alias"] =  str_replace('/','',$regs[0]);
+         return;
+      }            
+	  //cho link: /hoi-nghi-va-su-kien/trang-1 ( phân trang hội nghị và sự kiện )
+      $check_url_path = preg_match("@^/hoi-nghi-va-su-kien/trang-([^/]*)$@" , $this->path['path'], $regs);
+          
+      if ($check_url_path == 1){	
+         $_GET["file"] = "metting_event";			
+         $_GET["alias"] =  str_replace('/','',$regs[0]);
+         $_GET["page"] =  $regs[1];
+         return;
+      }
+      //cho link: /hoi-nghi-va-su-kien/bai-viet-dau-tien.html
+      $check_url_path = preg_match("@^/hoi-nghi-va-su-kien/([^/]*).html$@" , $this->path['path'], $regs);
+      if ($check_url_path == 1){			
+         $_GET["file"] = "metting_event_detail";	
+         $_GET["alias"] = $regs[1];
+         return;
+      }
       //cho link: /cau-hoi-thuong-gap/ (  )
       $check_url_path = preg_match("@^/cau-hoi-thuong-gap/$@" , $this->path['path'], $regs);
       if ($check_url_path == 1){	
@@ -265,7 +288,9 @@ class Rewrite{
          $_GET["id"] =  $regs[1];
          return;
       }
-	        
+      
+      
+         
       if(!isset($_GET["file"]) || $_GET["file"] == '') {
          $this->error404();
       }

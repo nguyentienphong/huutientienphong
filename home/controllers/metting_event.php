@@ -1,10 +1,10 @@
 <?php
-$news = new News($alias);
+$metting_event = new Metting_event($alias);
 $page = @$_GET['page'];
 if(!$page) $page = 1;
-$news->page = $page;
-$news->page_size = 4;
-$news_page = true;
+$metting_event->page = $page;
+$metting_event->page_size = 4;
+$metting_event_page = true;
 $index = new Index();
 ?>
 <!DOCTYPE HTML>
@@ -12,7 +12,7 @@ $index = new Index();
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tin tức Viễn Dương Cát Bà</title>
+	<title>Hội nghị và sự kiện Viễn Dương Cát Bà</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -73,7 +73,7 @@ $index = new Index();
 		
 		<?php include(ROOT.'/home/view/common/vic_header.php');?>
         <?php include(ROOT.'/home/view/home/vih_slider.php');?>
-		<?php include(ROOT.'/home/view/news/vin_new.php');?>
+		<?php include(ROOT.'/home/view/metting_event/vim_metting_event.php');?>
 		
 		<?php include(ROOT.'/home/view/common/vic_footer.php');?>
 	</div>
