@@ -588,7 +588,7 @@ class form{
         $tinyForm .= '<div class="form-group tinyMCE-wrapper" style="text-align:left; width:' . $width . '">' ;        
         $tinyForm .= '<label class="control-label fl" for="'.$id.'">'.$titleControl.'</label>';
         $tinyForm .= '<div class="controls col-sm-9">
-                      <button onclick="return showImagesGallery(\'tinymce\')" class="btn btn-success mgb5" type="button" id=""><i class="fa fa-plus-square"></i> Thư viện ảnh </button>';
+                      <button onclick="return showImagesGallery(\'tinymce\',\''.$id.'\')" class="btn btn-success mgb5" type="button" id=""><i class="fa fa-plus-square"></i> Thư viện ảnh </button>';
         $tinyForm .= '<textarea name="'.$name.'" id="'.$id.'" style="width:'.$width.';height:'.$height.'px">'.$value.'</textarea></div>';
         $tinyForm .= '<script type="text/javascript">
                          tinymce.init({

@@ -45,7 +45,6 @@
 										<li><a href="#">API</a></li>
 									</ul>
 								</li>
-								<li><a href="/nha-hang/"><?php echo $language[$lang_id]['nhahang']?></a></li>
 								<li><a href="/hoi-nghi-va-su-kien/"><?php echo $language[$lang_id]['hoinghivasukien']?></a></li>
 								<li><a href="/tin-tuc/"><?php echo $language[$lang_id]['tintuc']?></a></li>
 								<li><a href="/gioi-thieu/"><?php echo $language[$lang_id]['gioithieu']?></a></li>

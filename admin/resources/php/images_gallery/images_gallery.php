@@ -305,9 +305,10 @@
                                        $('.imu_choosed'+imu_id).addClass('choosed');
                                        $('.imu_choosed'+imu_id).toggle('medium');  
                                     }
+                                    console.log(imu_id);
                                     var image_alt = $('.imu_image_alt'+imu_id).val();
                                     var img = '<img src="'+path_image+'" title="'+image_alt+'" alt = "'+image_alt+'" />';
-                                    window.parent.tinyMCE.execCommand("mceInsertContent",false,img);
+                                    window.parent.tinyMCE.get('<?php echo $block?>').execCommand("mceInsertContent",false,img);
                                  }
                               </script>
                            </div>
