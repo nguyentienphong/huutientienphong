@@ -3,6 +3,9 @@
 		<div class="row">
 			<?php
 				$list_room = $rooms->listing_rooms();
+                foreach($list_room as $k=>$v) {
+                    change_language_value($list_room[$k]);
+                }
 				foreach($list_room as $rooms):
 			?>
 				<div class="col-md-4 room-wrap animate-box">

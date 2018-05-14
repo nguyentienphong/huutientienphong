@@ -9,14 +9,14 @@
              $i++;
         ?>
         <div class="item">
-								<a href="/phong/<?=$row['roo_alias']?>.html" class="room image-popup-link" style="background-image: url(<?=$row['roo_image']?>);"></a>
+								<a href="<?=$row['roo_image']?>" class="room image-popup-link" style="background-image: url(<?=$row['roo_image']?>);"></a>
 								<div class="desc text-center">
 									<span class="rate-star"><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
 									<h3><a href="/phong/<?=$row['roo_alias']?>.html"><?=$row['roo_name']?></a></h3>
 									<p class="price">
 										
 										<span class="price-room"><?=number_format($row['roo_price'])?></span>
-                                        <span class="currency"><?=$language[$lang_id]['donvi']?></span>
+                                        <span class="currency"><?//=$language[$lang_id]['donvi']?>VNĐ</span>
 										<span class="per">/ <?=$language[$lang_id]['motdem']?></span>
 									</p>
 									<ul>
