@@ -98,7 +98,7 @@ $home_page = true;
 			</div>
 		</div>
 
-        <?php include(ROOT.'/home/view/home/vih_restaurant.php');?>
+        <?php //include(ROOT.'/home/view/home/vih_restaurant.php');?>
 		
         <?php include(ROOT.'/home/view/home/vih_news.php');?>
 		
