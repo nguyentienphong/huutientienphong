@@ -110,6 +110,14 @@ class Rewrite{
          $_GET["alias"] =  str_replace('/','',$regs[0]);
          return;
       }
+      //cho link: /tuyen-dung/trang-1 ( phân trang tuyển dụng )
+      $check_url_path = preg_match("@^/tuyen-dung/trang-([^/]*)$@" , $this->path['path'], $regs);
+      if ($check_url_path == 1){	
+         $_GET["file"] = "recruitment";			
+         $_GET["alias"] =  str_replace('/','',$regs[0]);
+         $_GET["page"] =  $regs[1];
+         return;
+      }
       //cho link: /tuyen-dung/tin-tuyen-dung-dau-tien.html
       $check_url_path = preg_match("@^/tuyen-dung/([^/]*).html$@" , $this->path['path'], $regs);
       if ($check_url_path == 1){			

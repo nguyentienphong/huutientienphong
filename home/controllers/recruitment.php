@@ -1,109 +1,111 @@
 <?php
     $recruitment = new Recruitment();
+    $page = @$_GET['page'];
+    if(!$page) $page = 1;
+    $recruitment->page = $page;
+    $recruitment->page_size = 5;
+    $news = new News($alias);
     $recruitment_page = true;
+    $index = new Index();
 ?>
-<!DOCTYPE html>
-<html lang="en" class="recruitment not-opacity">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Tuyển dụng - VNPT EPAY JSC</title>
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tuyển dụng Viễn Dương Cát Bà</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
 
-    <!-- Bootstrap -->
-    <link href="/home/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/home/css/flexslider.css" rel="stylesheet">
-    <link href="/home/css/style.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.2/respond.min.js"></script>
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content="http://vienduongcatba.com/home/images/logo.png"/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="http://vienduongcatba.com/home/images/logo.png" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+    <link rel="icon" href="../../../favicon.ico">
 
-    <![endif]-->
-</head>
-<body>
-<?php include('view/common/vic_header.php');?>
-<section id="breadcrumb-wrapper">
-    <div class="container">
-        <ol class="breadcrumb">
-            <li><a href="/"><?=$language[$lang_id]['trangchu']?></a></li>
-            <li class="active"><?=$language[$lang_id]['tuyendung']?></li>
-        </ol>
-    </div>
-</section>
-<section id="recruitment">
-    <div class="container">
-        <div id="block-recruitment" class="text-center">
-            <h2 class="view-title text-uppercase"><?=$language[$lang_id]['tuyendung']?></h2>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="/home/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/home/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="/home/css/bootstrap.css">
 
-            <p class="text-uppercase"><?=$language[$lang_id]['gioithieuvetuyendung']?></p>
-            <a class="btn btn-default text-uppercase" href="/ung-tuyen/"><?=$language[$lang_id]['ungtuyenngay']?></a>
-        </div>
-    </div>
-</section>
-<section id="main-content">
-    <div class="container">
-        <div class="page-recruitment">
-            <div class="page-recruitment-title text-uppercase font_OpenSansSemibold"><?=$language[$lang_id]['danhsachtintuyendung']?></div>
-            <div id="sub-menu-recruitment" class="col-md-3 col-sm-3">
-                <?php include('view/recruitment/vir_categories.php');?>
-            </div>
-            <div id="" class="col-md-9 col-sm-9">
-                <div class="block-recruitment-title text-uppercase"><?=$language[$lang_id]['vitridangtuyen']?></div>
-                    <div id="myTabContent"class="tab-content">
-                     <?
-                      $i=0;
-                      foreach($recruitment_cat as $key=>$row) {
-                        $i++;
-                        $recruitment_list_cat = $recruitment_list_cat_arr[$key];
-                         /*foreach($recruitment_list_cat as $k=>$v) {
-                                 change_language_value($recruitment_list_cat[$k]);    
-                         }*/
-                    ?>
-                    <div id="<?=$row['cat_alias']?>" role="tabpanel" class="tab-pane <?=($i==1) ? 'active':''?>">
-                        <div id="block-recruitment-content">
-                            <? foreach($recruitment_list_cat as $row) {
-                            ?>
-                                    <div class="block-news-recruitment">
-                                        <p><span class="date"> <?=getDateTime(1,0,1,0,'',$row['rec_date'])?> </span><span class="recrui-hot text-lowercase">New</span></p>
-                                        <a class="news-title" href="/tuyen-dung/<?=$row['rec_alias']?>.html"> <?=$row['rec_title']?></a>
-                
-                                        <p class="summary"><?=$row['rec_summary']?></p>
-                                        <div class="views-button">
-                                            <a class="btn btn-default" href="/tuyen-dung/<?=$row['rec_alias']?>.html"><?=$language[$lang_id]['xemthem']?> ></a>
-                                        </div>
-                                    </div>
-                            <?
-                            }?>
-                        </div>
-                    </div>
-                    <? } ?>
-                    
-                </div>
-            </div>
-            
-        </div>
-    </div>
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/home/css/magnific-popup.css">
 
-</section>
-<?php include('view/common/vic_footer.php');?>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="/home/js/main.js"></script>
-<script src="/home/js/jquery.flexslider-min.js"></script>
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="/home/css/flexslider.css">
 
-<script>
-    $(document).ready(function () {
-        $('.flexslider').flexslider({
-            animation: "slide"
-        });
-    });
-</script>
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="/home/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/home/css/owl.theme.default.min.css">
+	
+	<!-- Date Picker -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="/home/fonts/flaticon/font/flaticon.css">
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/home/js/bootstrap.min.js"></script>
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="/home/css/style.css">
+    <link rel="stylesheet" href="/home/css/mystyle.css">
+	<!-- Modernizr JS -->
+	<script src="/home/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="colorlib-loader"></div>
+
+	<div id="page">
+		
+		<?php include(ROOT.'/home/view/common/vic_header.php');?>
+        <?php include(ROOT.'/home/view/home/vih_slider.php');?>
+		<?php include(ROOT.'/home/view/recruitment/vir_listing.php');?>
+		
+		<?php include(ROOT.'/home/view/common/vic_footer.php');?>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="/home/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/home/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/home/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/home/js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="/home/js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="/home/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="/home/js/jquery.magnific-popup.min.js"></script>
+	<script src="/home/js/magnific-popup-options.js"></script>
+	<!-- Date Picker -->
+	<script src="/home/js/bootstrap-datepicker.js"></script>
+	<!-- Main -->
+	<script src="/home/js/main.js"></script>
+
+	</body>
+</html>
 <script>
 <?if($alias !='tuyen-dung'){
     $alias  = htmlspecialbo($alias);

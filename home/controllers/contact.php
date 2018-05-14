@@ -50,7 +50,7 @@ $contact_page = true;
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tin tức và sự kiện Viễn Dương Cát Bà</title>
+	<title>Liên hệ Viễn Dương Cát Bà</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -58,14 +58,15 @@ $contact_page = true;
 
   <!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
+	<meta property="og:image" content="http://vienduongcatba.com/home/images/logo.png"/>
 	<meta property="og:url" content=""/>
 	<meta property="og:site_name" content=""/>
 	<meta property="og:description" content=""/>
 	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
+	<meta name="twitter:image" content="http://vienduongcatba.com/home/images/logo.png" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
+    <link rel="icon" href="../../../favicon.ico">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">

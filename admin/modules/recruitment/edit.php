@@ -16,13 +16,16 @@ foreach($arrCat as $i=>$cat){
 $myform = new generate_form();
 $myform->add('rec_title','rec_title',0,0,'',1,'Bạn chưa nhập tiêu đề tuyển dụng');
 $myform->add('rec_title_en','rec_title_en',0,0,'',0,'Bạn chưa nhập tiêu đề tuyển dụng bằng tiếng anh');
+$myform->add('rec_title_ko','rec_title_ko',0,0,'',0,'Bạn chưa nhập tiêu đề tuyển dụng bằng tiếng hàn');
 $myform->add('rec_cat_id','rec_cat_id',1,0,0,1,'Bạn chưa chọn danh mục');
 $myform->add('rec_active','rec_active',1,0,0);
 //$myform->add('rec_hot','rec_hot',1,0,0);
 $myform->add('rec_summary','rec_summary',0,0,'');
 $myform->add('rec_summary_en','rec_summary_en',0,0,'');
+$myform->add('rec_summary_ko','rec_summary_ko',0,0,'');
 $myform->add('rec_detail','rec_detail',0,0,'',1,'Bạn chưa nhập chi tiết');
 $myform->add('rec_detail_en','rec_detail_en',0,0,'',0,'Bạn chưa nhập chi tiết tiếng anh');
+$myform->add('rec_detail_ko','rec_detail_ko',0,0,'',0,'Bạn chưa nhập chi tiết tiếng hàn');
 
 $myform->removeHTML(0);
 $myform->addTable($bg_table);
@@ -74,20 +77,28 @@ if($row 		= mysql_fetch_assoc($db_data->result)){
             <div class="panel-body">
                <?php print_error_msg($bg_errorMsg)?>
                <?=$form->form_open()?>
-               <?=$form->text(array('label'=>'Tên',
+               <?=$form->text(array('label'=>'Tiêu đề',
                                  'name'=>'rec_title',
                                  'id'=>'rec_title',
                                  'value'=>getValue('rec_title','str','POST',$rec_title),
-                                 'require'=>1, 'errorMsg'=>'Bạn chưa nhập tên tiếng anh', 
+                                 'require'=>1, 'errorMsg'=>'Bạn chưa nhập Tiêu đề tiếng anh', 
                                  'placeholder'=> 'Tiêu đề không dài quá 255 ký tự',
-                                 'helptext'=>'Tên được chia làm 2 phần bằng dấu | ,ví dụ : Tư vấn giao dịch | Thương mại quốc tế',
+                                 'helptext'=>'',
                                  'class'=>'col-sm-9')
                )?>
-               <?=$form->text(array('label'=>'Tên tiếng anh',
+               <?=$form->text(array('label'=>'Tiêu đề tiếng anh',
                                  'name'=>'rec_title_en',
                                  'id'=>'rec_title_en',
                                  'value'=>getValue('rec_title_en','str','POST',$rec_title_en),
-                                 'require'=>0, 'errorMsg'=>'Bạn chưa nhập tên tiếng anh', 
+                                 'require'=>0, 'errorMsg'=>'Bạn chưa nhập Tiêu đề tiếng anh', 
+                                 'placeholder'=> 'Tiêu đề không dài quá 255 ký tự',
+                                 'class'=>'col-sm-9')
+               )?>
+               <?=$form->text(array('label'=>'Tiêu đề tiếng hàn',
+                                 'name'=>'rec_title_ko',
+                                 'id'=>'rec_title_ko',
+                                 'value'=>getValue('rec_title_ko','str','POST',$rec_title_ko),
+                                 'require'=>0, 'errorMsg'=>'Bạn chưa nhập Tiêu đề tiếng hàn', 
                                  'placeholder'=> 'Tiêu đề không dài quá 255 ký tự',
                                  'class'=>'col-sm-9')
                )?>
@@ -113,7 +124,7 @@ if($row 		= mysql_fetch_assoc($db_data->result)){
                          })
                     });
                  </script>
-               <?=$form->select(array('label'=>'Danh mục',
+               <?/*=$form->select(array('label'=>'Danh mục',
                                    'name'=>'rec_cat_id', 
                                    'id'=>'rec_cat_id',
                                    'option'=>$list_cat, 
@@ -122,7 +133,7 @@ if($row 		= mysql_fetch_assoc($db_data->result)){
                                    'errorMsg'=>'Bạn chưa chọn danh mục',
                                    'selected'=>getValue('rec_cat_id','int','POST',$rec_cat_id),
                                    'class'=>'col-sm-9')
-               )?>
+               )*/?>
                <?/*=$form->text(array('label'=>'Tags bài viết',
                                  'name'=>'rec_tags',
                                  'id'=>'rec_tags',
@@ -146,6 +157,13 @@ if($row 		= mysql_fetch_assoc($db_data->result)){
                                      'style'=>'width:100%;height:100px', 
                                      'class'=>'col-sm-9')
                )?>
+               <?=$form->textarea(array('label'=> 'Tóm tắt tiếng hàn', 
+                                     'name'=> 'rec_summary_ko', 
+                                     'id'=> 'rec_summary_ko',
+                                     'value'=>getValue('rec_summary_ko','str','POST',$rec_summary_ko), 
+                                     'style'=>'width:100%;height:100px', 
+                                     'class'=>'col-sm-9')
+               )?>
                <?=$form->tinyMCE('Nội dung', 
                               'rec_detail', 
                               'rec_detail', 
@@ -155,7 +173,13 @@ if($row 		= mysql_fetch_assoc($db_data->result)){
                <?=$form->tinyMCE('Nội dung tiếng anh', 
                               'rec_detail_en', 
                               'rec_detail_en', 
-                              getValue('rec_detail','str','POST',$rec_detail_en), 
+                              getValue('rec_detail_en','str','POST',$rec_detail_en), 
+                              '100%'
+               )?>
+               <?=$form->tinyMCE('Nội dung tiếng hàn', 
+                              'rec_detail_ko', 
+                              'rec_detail_ko', 
+                              getValue('rec_detail_ko','str','POST',$rec_detail_ko), 
                               '100%'
                )?>
                <?=$form->checkbox(array('label'=> 'Xuất bản', 
