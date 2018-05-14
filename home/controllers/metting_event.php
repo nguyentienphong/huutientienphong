@@ -20,14 +20,15 @@ $index = new Index();
 
   <!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
+	<meta property="og:image" content="http://vienduongcatba.com/home/images/logo.png"/>
 	<meta property="og:url" content=""/>
 	<meta property="og:site_name" content=""/>
 	<meta property="og:description" content=""/>
 	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
+	<meta name="twitter:image" content="http://vienduongcatba.com/home/images/logo.png" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
+    <link rel="icon" href="../../../favicon.ico">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">

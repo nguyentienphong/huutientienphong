@@ -4,3 +4,6 @@
 .lang_active img{
     border-bottom: 2px solid red;
 }
+.pagination .active{
+        background-color: #eeeeee;
+}

@@ -14,18 +14,19 @@ $home_page = true;
     <title><?=$general_array['seo_title']?></title>
     <meta content="<?=$general_array['seo_keyword']?>" name="keywords"/>
     <meta content="<?=$general_array['seo_description']?>" name="description"/>	
-
+    <meta name="robots" content="index,follow" />
   <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
+	<meta property="og:title" content="<?=$general_array['seo_title']?>"/>
 	<meta property="og:image" content="http://vienduongcatba.com/home/images/logo.png"/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
+	<meta property="og:url" content="http://vienduongcatba.com/"/>
+    <meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Viễn dương cát bà"/>
+	<meta property="og:description" content="<?=$general_array['seo_description']?>"/>
 	<meta name="twitter:title" content="" />
 	<meta name="twitter:image" content="http://vienduongcatba.com/home/images/logo.png" />
-	<meta name="twitter:url" content="" />
+	<meta name="twitter:url" content="http://vienduongcatba.com/" />
 	<meta name="twitter:card" content="" />
-    <link rel="icon" href="../../../favicon.ico">
+    <link rel="icon" href="../../../favicon.ico?v=1">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
@@ -81,7 +82,6 @@ $home_page = true;
 					<div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
 						<span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
 						<h2><?php echo $language[$lang_id]['phong']?></h2>
-						<p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 					</div>
 				</div>
 				<div class="row">
@@ -105,29 +105,7 @@ $home_page = true;
 
 		<?php include(ROOT.'/home/view/home/vih_feedback.php');?>
 
-	
-		<!--<div id="colorlib-subscribe" style="background-image: url(images/img_bg_2.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
-						<span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
-						<h2>Sign Up for a Newsletter</h2>
-						<p>Get A 50% Discounts in every Rooms, Book now!</p>
-						<form class="form-inline qbstp-header-subscribe">
-							<div class="row">
-								<div class="col-md-12 col-md-offset-0">
-									<div class="form-group">
-										<input type="text" class="form-control" id="email" placeholder="Enter your email">
-										<button type="submit" class="btn btn-primary">Subscribe</button>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>-->
+
 		<?php include(ROOT.'/home/view/common/vic_footer.php');?>
 	</div>
 

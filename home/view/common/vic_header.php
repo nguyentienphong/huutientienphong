@@ -50,6 +50,7 @@
 								<li><a href="/tin-tuc/"><?php echo $language[$lang_id]['tintuc']?></a></li>
 								<li><a href="/gioi-thieu/"><?php echo $language[$lang_id]['gioithieu']?></a></li>
 								<li><a href="/lien-he/"><?php echo $language[$lang_id]['lienhe']?></a></li>
+                                <li><a href="/tuyen-dung/"><?php echo $language[$lang_id]['tuyendung']?></a></li>
 							</ul>
 						</div>
 					</div>

@@ -19,10 +19,13 @@ class Recruitment extends Base{
         parent::__construct($this->result['rec_id']);
     }
     public function recruitment_list() { // danh sách tuyển dụng
+    $page = ($this->page >= 2) ? $this->page : 1;
+      $page_start = ($page - 1) * $this->page_size;
+      $page_end = $page * $this->page_size;
         $recruitment = db_array('SELECT *
                         FROM recruitment
                         WHERE rec_active = 1 ORDER BY rec_id DESC
-                        ');
+                        LIMIT '. $page_start . ', '. $this->page_size .'');
         return $recruitment;                
     }
     public function recruitment_list_cat($cat_id = 0){
@@ -36,6 +39,13 @@ class Recruitment extends Base{
                           FROM recruitment
                           WHERE rec_active = 1
                           AND rec_alias ="'.$alias.'"');
+   }
+   public function total_recruitment(){
+      $arr = db_array('SELECT rec_id
+                     FROM recruitment
+                     WHERE rec_active = 1
+                     ');
+      return count($arr);
    }
 }
 ?>
