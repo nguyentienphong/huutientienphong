@@ -236,6 +236,7 @@ class Rewrite{
          $_GET["page"] =  $regs[1];
          return;
       }
+
       //cho link: /cau-hoi-thuong-gap/cau-hoi-dau-tien.html
       $check_url_path = preg_match("@^/cau-hoi-thuong-gap/([^/]*).html$@" , $this->path['path'], $regs);
       if ($check_url_path == 1){			
@@ -250,13 +251,15 @@ class Rewrite{
          $_GET["alias"] =  str_replace('/','',$regs[0]);
          return;
       }
+	  /*
       //cho link: categories
       $check_url_path = preg_match("@^/([^/]*)/$@" , $this->path['path'], $regs);
       if ($check_url_path == 1){	
          $_GET["file"] = "categories";			
          $_GET["alias"] =  str_replace('/','',$regs[1]);
          return;
-      }
+      } 
+	  */
       //cho link: categories có thêm trang
       $check_url_path = preg_match("@^/([^/]*)/trang-([^/]*)$@" , $this->path['path'], $regs);
       if ($check_url_path == 1){	
@@ -279,7 +282,8 @@ class Rewrite{
          $_GET["alias"] = $regs[1];
          return;
       }
-	  
+	        
+		
 	  //cho link: /gui-mail/23 ( gui mail cho yeu cau dat phong )
       $check_url_path = preg_match("@^/gui-mail/([^/]*)$@" , $this->path['path'], $regs);
       if ($check_url_path == 1){	
@@ -288,8 +292,29 @@ class Rewrite{
          $_GET["id"] =  $regs[1];
          return;
       }
-      
-      
+
+      //cho link: /phong/
+      $check_url_path = preg_match("@^/phong/$@" , $this->path['path'], $regs);
+      if ($check_url_path == 1){	
+         $_GET["file"] = "list_room_accommodation";			
+         $_GET["alias"] =  str_replace('/','',$regs[0]);
+         return;
+      }
+	  //cho link: /phong/sophong
+      $check_url_path = preg_match("@^/phong/([^/]*)$@" , $this->path['path'], $regs);
+      if ($check_url_path == 1){	
+         $_GET["file"] = "list_room_accommodation";			
+         $_GET["alias"] =  str_replace('/','',$regs[0]);
+		 $_GET["id"] =  $regs[1];
+         return;
+      }
+	  //cho link: /dat-phong/
+      $check_url_path = preg_match("@^/dat-phong/$@" , $this->path['path'], $regs);
+      if ($check_url_path == 1){	
+         $_GET["file"] = "book_room";			
+         $_GET["alias"] =  str_replace('/','',$regs[0]);
+         return;
+      }
          
       if(!isset($_GET["file"]) || $_GET["file"] == '') {
          $this->error404();

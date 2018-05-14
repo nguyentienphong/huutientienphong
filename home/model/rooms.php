@@ -9,11 +9,23 @@ class Rooms extends Base{
     var $page_size = 8;//Kích cỡ 1 trang hiển thị bao nhiêu kết quả
     
     public function listing_rooms() {
-        $slides = db_array('SELECT *
+        $rooms = db_array('SELECT *
                         FROM rooms
                         WHERE roo_active = 1 ORDER BY roo_position ASC
                         ');
-        return $slides;                
+        return $rooms;                
     }
+	
+	public function detail_rooms($roo_id){
+		$rooms = db_array("SELECT *
+                        FROM rooms
+                        WHERE roo_active = 1 AND roo_id = $roo_id ORDER BY roo_position ASC
+                        ");
+		
+        if(count($rooms) > 0){
+			return $rooms[0];
+		}
+		
+	}
 }
 ?>

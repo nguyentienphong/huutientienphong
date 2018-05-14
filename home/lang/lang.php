@@ -83,7 +83,10 @@ $language = array(0=>array('trangchu'=>"Trang chủ",
 								'checkout_date_require' => 'Bạn chưa chọn ngày trả phòng',
 								'notification' => 'Thông báo',
 								'close' => 'Đóng',
-								'book_room_message_success' => "Thông tin đặt phòng của bạn đã được ghi nhận. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất."
+								'book_room_message_success' => "Thông tin đặt phòng của bạn đã được ghi nhận. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.",
+								'per_night' => 'một đêm',
+								'tong_quan' => 'Tổng quan',
+								'tien_ich' => 'Tiện ích'
                               ),
                      1=>array('trangchu'=>"Home",
                                 'phong'=>'Rooms',
@@ -167,7 +170,10 @@ $language = array(0=>array('trangchu'=>"Trang chủ",
 								'checkout_date_require' => 'Require Check-out date',
 								'notification' => 'Notification',
 								'close' => 'Close',
-								'book_room_message_success' => "Your room information was written. We are will be associated with you in the early time."
+								'book_room_message_success' => "Your room information was written. We are will be associated with you in the early time.",
+								'per_night' => 'per night',
+								'tong_quan' => 'tong_quan',
+								'tien_ich' => 'Tiện ích'
                               ),
                      2=>array('trangchu'=>"홈페이지",
                                 'phong'=>'방',
@@ -251,6 +257,9 @@ $language = array(0=>array('trangchu'=>"Trang chủ",
 								'checkout_date_require' => 'Require Check-out date',
 								'notification' => 'Notification',
 								'close' => 'Close',
-								'book_room_message_success' => "Your room information was written. We are will be associated with you in the early time."
+								'book_room_message_success' => "Your room information was written. We are will be associated with you in the early time.",
+								'per_night' => 'per night',
+								'tong_quan' => 'tong_quan',
+								'tien_ich' => 'Tiện ích'
                               ));
 ?>

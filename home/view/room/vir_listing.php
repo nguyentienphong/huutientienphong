@@ -20,8 +20,8 @@
 										<span class="per">/ <?=$language[$lang_id]['motdem']?></span>
 									</p>
 									<ul>
-										<li><i class="icon-check"></i> <?=$row['roo_number']?></li>
-										<li><i class="icon-check"></i> <?=$language[$lang_id][($row['roo_status'] ==0) ?'hetphong':'conphong']?></li>
+										<!--li><i class="icon-check"></i> <?//=$row['roo_number']?></li>
+										<li><i class="icon-check"></i> <?//=$language[$lang_id][($row['roo_status'] ==0) ?'hetphong':'conphong']?></li-->
 									</ul>
 									<p><a class="btn btn-primary btn-book"><?=$language[$lang_id]['datphong']?>!</a></p>
 								</div>

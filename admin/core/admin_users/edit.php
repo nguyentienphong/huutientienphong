@@ -12,6 +12,7 @@ $myform->add('adm_mail','adm_mail',0,0,'');
 $myform->add('adm_name','adm_name',0,0,'');
 $myform->add('adm_phone','adm_phone',0,0,'');
 $myform->add('adm_active','adm_active',1,0,0);
+$myform->add('recivice_email_notify','recivice_email_notify',1,0,0);
 $action = getValue('action','str','POST','');
 if($action == 'execute'){
 	$bg_errorMsg .= $myform->checkData();
@@ -116,7 +117,8 @@ $db_getallmodule = new db_query('SELECT *
                <?=$form->text(array('label'=>'Điện thoại','name'=>'adm_phone','id'=>'adm_phone','value'=>$adm_phone,'class'=>'col-sm-9'))?>
                <?=$form->text(array('label'=>'Ngày sinh','name'=>'adm_birthday','id'=>'adm_birthday','isdatepicker'=>1,'value'=>date('d/m/Y',$adm_birthday),'class'=>'col-sm-9'))?>
                <?=$form->checkbox(array('label'=>'Kích hoạt','name'=>'adm_active','id'=>'adm_active','value'=>1,'currentValue'=>$adm_active,'class'=>'col-sm-9','extra'=>' onclick="return check_one(\'adm_active\');"'))?>
-               <?//Phan quyen quan tri?>
+               <?=$form->checkbox(array('label'=>'Nhận mail thông báo','name'=>'recivice_email_notify','id'=>'recivice_email_notify','value'=>1,'currentValue'=>$recivice_email_notify,'class'=>'col-sm-9','extra'=>' onclick="return check_one(\'recivice_email_notify\');"'))?>
+			   <?//Phan quyen quan tri?>
                <div class="well">
                   <header class="panel-heading">
                   Phân quyền module 
