@@ -36,14 +36,15 @@
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
 								<li class="active"><a href="/"><?php echo $language[$lang_id]['trangchu']?></a></li>
-								<li class="has-dropdown">
+								<!--li class="has-dropdown"-->
+								<li>
 									<a href="/phong/"><?php echo $language[$lang_id]['phong']?></a>
-									<ul class="dropdown">
+									<!--ul class="dropdown">
 										<li><a href="#">Web Design</a></li>
 										<li><a href="#">eCommerce</a></li>
 										<li><a href="#">Branding</a></li>
 										<li><a href="#">API</a></li>
-									</ul>
+									</ul-->
 								</li>
 								<li><a href="/hoi-nghi-va-su-kien/"><?php echo $language[$lang_id]['hoinghivasukien']?></a></li>
 								<li><a href="/tin-tuc/"><?php echo $language[$lang_id]['tintuc']?></a></li>

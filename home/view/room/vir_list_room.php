@@ -23,7 +23,7 @@
 							<li><i class="icon-check"></i> Breakfast included</li>
 							<li><i class="icon-check"></i> Price does not include VAT &amp; services fee</li>
 						</ul-->
-						<p><a class="btn btn-primary" href="/">Book now!</a></p>
+						<p><a id="book_now" class="btn btn-primary" data-href="/"><?php echo $language[$lang_id]['book-room'] ?></a></p>
 					</div>
 				</div>
 			<?php endforeach; ?>

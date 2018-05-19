@@ -107,6 +107,8 @@ $index = new Index();
 	<script src="/home/js/magnific-popup-options.js"></script>
 	<!-- Date Picker -->
 	<script src="/home/js/bootstrap-datepicker.js"></script>
+	<!-- cookie -->
+	<script src="/home/js/jquery.cookie.js"></script>
 	<!-- Main -->
 	<script src="/home/js/main.js"></script>
 

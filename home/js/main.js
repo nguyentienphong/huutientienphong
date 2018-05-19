@@ -283,7 +283,22 @@
 		datePicker();
 	});
 
-
+	$('body').on('click','#book_now',function(e){
+		e.preventDefault();
+		$.cookie('bookRoom', '1', {expires : 7, path:'/'});
+		$(location).attr("href", $(this).data("href"));
+	});
+	
+	var bookRoom = $.cookie('bookRoom');
+	if(bookRoom != null && bookRoom == '1')	{
+		var x = $("#scrollHere").position().top;
+		$('html, body').animate({
+            scrollTop: x / 1.5
+		}, 2000);
+		$.removeCookie('bookRoom');
+	}
+		
+	
 }());
 
 function langEn(){

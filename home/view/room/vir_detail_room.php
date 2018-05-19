@@ -3,7 +3,9 @@
 		<div class="row">
 			<?php
 				$room_detail = $rooms->detail_rooms($re_id);
-				
+				foreach($room_detail as $k=>$v) {
+					change_language_value($room_detail);
+				}
 			?>
 			<div class="col-md-10 col-md-offset-1 animate-box fadeInUp animated-fast">
 				<h3><?=$room_detail['roo_name']; ?></h3>
@@ -18,7 +20,7 @@
 								<span class="per">/ <?php echo $language[$lang_id]['per_night']?></span>
 							</p>
 							
-							<p><a class="btn btn-primary" href="/">Book now!</a></p>
+							<p><a id="book_now" class="btn btn-primary" data-href="/"><?php echo $language[$lang_id]['book-room'] ?></a></p>
 						</div>
 					</div>
 					

@@ -23,7 +23,7 @@
 										<!--li><i class="icon-check"></i> <?//=$row['roo_number']?></li>
 										<li><i class="icon-check"></i> <?//=$language[$lang_id][($row['roo_status'] ==0) ?'hetphong':'conphong']?></li-->
 									</ul>
-									<p><a class="btn btn-primary btn-book"><?=$language[$lang_id]['datphong']?>!</a></p>
+									<p><a id="book_now" class="btn btn-primary btn-book" href="/"><?=$language[$lang_id]['datphong']?>!</a></p>
 								</div>
 							</div>
 <? } ?>
